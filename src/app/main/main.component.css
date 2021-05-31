@@ -1,0 +1,8 @@
+.Buttons{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.Button{
+    margin-left: 3px;
+}

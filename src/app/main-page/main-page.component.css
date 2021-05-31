@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Cinzel:400,700,900|Lato:100,300,400,700,900|Lobster|Lora:400,700|Mansalva|Muli:200,300,400,600,700,800,900|Open+Sans:300,400,600,700,800|Oswald:200,300,400,500,600,700|Roboto:100,300,400,500,700,900&display=swap');
+/* Used Google Fonts */
+
+
+*{
+    background-color: white;
+    font-family:Nunito Sans, avenir-next-lt-pro-6, Roboto, Helvetica Neue, sans-serif ;  
+
+}
+.main_photo{
+height: 100vh;
+
+margin: 0 0 0 0;
+padding: 0;
+}
+.menuu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+}
+
+.logo { color: #000000; font-family: 'Trocchi', serif; font-size: 75px; font-weight: normal; line-height: 48px; margin: 0; padding-bottom: 50px;font-weight: bolder; }
+.subtext { color: #e99898; font-family: 'Source Sans Pro', sans-serif; font-size: 35px; font-weight: 400; line-height: 32px; margin: 0 0 24px; }
+.left{
+    height: 100vh;
+    margin-left: 0;
+    padding-left: 0;
+    padding: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    float: left;
+    text-align: center;
+    
+}
+.right{
+    height: 100vh;
+    background-image: url("./../../assets/photos/main_photo.svg") ;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    float: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center center;
+}
+.logo-holder{
+    text-align:center;
+    
+}
+
+/* Logo-5 */
+.logo-5 h3 {
+    color: #e74c3c;
+    font-weight: 300;
+    font-size: 100px;
+    line-height:1;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 5px;
+}
+.logo-5 p {
+    font-size: 34px;
+    margin-left: 0;
+    color: #545454;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: 'Mansalva', cursive;
+    position: relative;
+    text-decoration: none;
+}
+a{
+    text-decoration:none !important;
+    display: inline-block;
+  }
+
+
+@media screen and (max-width: 780px) {
+    .right { 
+        float: none;
+        width:100%;
+        height: 50vh;
+      }
+    .left { 
+     float: none;
+     width:100%;
+     height: fit-content;
+     padding-top: 70px;
+   }
+   .logo-5  h3{
+       font-size: 80px;
+   }
+   .logo-5  p{
+    font-size: 24px;
+}
+
+ }
+ .half-layer{
+     width: 100%;
+     min-height: 50vh;
+     max-height: fit-content;
+ }
+ .square{
+     max-width: 250px !important;
+     max-height: 250px !important;
+     min-width: 250px !important;
+     min-height: 250px !important;
+     display: flex;
+    flex-direction: column;
+     position: relative;
+     border-radius: 10px;
+     margin-left: 30px;
+     margin-bottom: 70px;
+
+     }
+ .team_photo{
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     position: absolute;
+     top: -50px ;
+     left: 30%;
+ }
+ .team_photo > img{
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+ }
+ .team_name{
+    position: absolute;
+    top: 70px ;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+
+}
+
+.team_place{
+    position: absolute;
+    top:150px ;
+    left: 25%;
+    width: fit-content;
+}
+.place-txt {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 25px;
+    color: #7e7e7e;
+    font-size: 15px;
+}
+.name-txt {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 25px;
+    color: #1f1e1e;
+    font-size: 25px;
+    font-weight: bold;
+}
+.desc{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 30%;
+    display: none;
+    transition: background-color 500ms linear ;
+    transition: transform 500ms linear ;
+    border-radius: 10px;
+}
+.desc:hover{
+    background-color:rgba(255, 255, 255, 0.90);
+}
+
+.square:hover .desc{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.desc  *{
+    background-color: transparent;
+}
+.square:hover .desc > p{
+    animation: comeup 0.5s;
+
+}
+
+.square:hover .desc > .social{
+    animation: comedown 0.5s;
+
+}
+.square:hover .name-txt{
+    display: none;
+}
+.square:hover .place-txt{
+    display: none;
+}
+.social{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.social > i{
+    font-size: 25px;
+}
+
+.team-container{
+margin-top: 90px;
+}
+
+@keyframes comeup{
+    from{
+        transform: translateY(-100%);
+
+
+    }
+    to{
+        transform: translateY(0px);
+
+    }
+}
+@keyframes comedown{
+    from{
+        transform: translateY(120%);
+
+
+    }
+    to{
+        transform: translateY(0px);
+
+    }
+}
+.layer-name{
+    margin-bottom: 60px;
+}
+.layer-name >*{
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+
+
+}
+/* .square:hover .desc{
+   display: block;
+} */
+
+.layer{
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.whatis{
+    min-height: fit-content;
+    max-height: 200vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 100px !important;
+
+}
+.leftwhat{
+    flex: 8;
+    text-align: center;
+    min-height: 50vh;
+    max-height: fit-content;
+
+}
+.leftwhat > .header{
+    font-size: 2.5rem;
+    font-weight: 900!important;
+    margin-top: 30px;
+    width: 100%;
+    height: fit-content;
+    
+
+}
+.leftwhat > p{
+    font-size: 1.2em;
+    text-align: left;
+    max-width: 40ch;
+    font-style: italic;
+    margin: 0 auto;
+}
+.ullist { 
+    margin: 0 auto;
+    width: fit-content;
+}
+.leftwhat > .ullist> ul{
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-left: 3rem;
+}
+.leftwhat > .ullist> ul > li{
+    max-width:  80% ;
+    min-width:  80%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: medium;
+    color: rgb(77, 74, 74);
+}
+li {
+    list-style: none;
+    font-size: 20px;
+}
+
+li:before {
+    content:"·";
+    font-size:90px;
+    vertical-align:middle;
+    line-height:20px;
+}
+
+.rightwhat{
+flex: 6;
+min-height: 50vh;
+max-height: fit-content;
+background-image: url("./../../assets/photos/Block-3-image.png") ;
+margin: 0;
+padding: 0;
+background-repeat: no-repeat;
+background-size: contain;
+padding: auto auto;
+margin-right: 10rem;
+margin-top: 30px;
+
+}
+
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+
+    .whatis{
+        flex-direction: column;
+    }
+    .rightwhat{
+        margin-right: 0;
+        margin-left: 5rem;
+    }
+    .cardContainer{
+        flex-direction: column;
+        background-color: red;
+    }
+
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+ 
+  }
+
+  .column:hover img:hover  {
+    opacity: 0.5;
+  }
+
+
+
+  .cards{
+    min-height: 50vh;
+    max-height: fit-content;
+  }
+  .cards > p {
+    text-align: center;
+    padding-top:20px;
+    font-size: 20px;
+    font-style: italic;
+    background-color: transparent;
+
+    font-weight:bolder;
+}
+.cardContainer{
+    width: fit-content;
+    margin: 10px auto; 
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+
+}
+.docard{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px 10px;
+    background-position: center center;
+    text-align: center;
+    background-color: transparent;
+
+    border-left: 3px solid rgb(84, 125, 240);
+    border-right: 3px solid rgb(84, 125, 240);
+
+}
+.docard:hover { 
+    border :3px solid rgb(84, 125, 240);
+}
+.docard > p{
+    padding-top: 85%;
+    background-color: transparent;
+    font-size: 20px;
+    font-style: italic;
+    font-weight:bolder;
+}

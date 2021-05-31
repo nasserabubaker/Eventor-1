@@ -1,0 +1,13 @@
+<div class="main">
+    <h1>Search</h1>
+    <div class="searchbar">
+        <div class="input">
+            <label for ="search">Search For Title</label>
+            <input name="search"  class="search"  id="search" placeholder="Enter Title to search">
+            <button (click)="Search()" type="button" class="btn btn-primary">search</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="searched" class="Content row">
+    <app-search-card class="col-3 card" *ngFor="let event of result"  [n]="event" ></app-search-card>
+</div>

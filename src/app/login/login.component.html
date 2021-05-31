@@ -1,0 +1,34 @@
+<h1 class="main_text">
+    تسجيل الدخول
+</h1>
+<div class="login-box row">
+    <div class="right col-lg-4 col-md-4 col-12">
+        <img src="/assets/photos/signin.jpg">
+    </div>
+    <div class="left col-lg-8 col-md-8 col-12">
+        <div class="login-form" action="">
+            <div class="form-div ">
+                <div class="form-row ">
+                    <label for="uname">
+                        <i class="fas fa-user "></i>
+                    </label> 
+                    <input class="form-input" type="text" placeholder=""  [formControl]="username" name="uname" required>
+                </div>
+                <div class="form-row">
+                    <label for="uname">
+                        <i class="fas fa-lock"></i>
+                    </label> 
+                    <input class="form-input" type="password" placeholder="" [formControl]="password" name="uname" required>
+            
+                </div>
+                <div  style="border: none;" class="form-row">
+                    
+                    <input class="login-input"  type="submit" (click) = "logIn()"  value="تسجيل الدخول">
+            
+                </div>
+
+            </div>
+     
+        </div>
+    </div>
+</div>

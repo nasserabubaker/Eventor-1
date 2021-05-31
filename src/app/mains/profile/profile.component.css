@@ -1,0 +1,145 @@
+:root{
+    --nav:25vw;
+}
+
+*{
+
+
+}
+.cards{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: calc(100%-var(--nav));
+    margin-left: 25vw;
+}
+.box{
+    transition: box-shadow .3s;
+    padding: 20px;
+    border-radius: 30px;
+    height: 150px;
+    min-width: 300px;
+    background-color: white;
+    max-width: fit-content;
+    margin: 10px auto;
+    text-align: center;
+    color: gray;
+
+}
+.Events{
+}
+.profile{
+    display: flex;
+    justify-content: center;
+
+}
+.profile  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.profile  .photo {
+   width: fit-content;
+   height: fit-content;
+   margin-left: 10px;
+   margin: auto 0 ;
+
+
+}
+.profile .info{
+    margin: auto 0 ;
+    margin-left: 10px;
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    
+}
+.box:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+
+}
+.Events > h1{
+    font-weight: 500 !important;
+}
+.Events > p{
+    font-weight: 900;
+    font-size: large;
+    color: black;
+
+}
+.big-cards{
+display: flex;
+justify-content: space-evenly;
+width: calc(100%-var(--nav));
+margin-left: 25vw;
+max-height: fit-content;
+}
+.big-cards > .card{
+    width: 550px;
+    height: 350px;
+
+    margin-top: 50px;
+    transition: box-shadow .3s;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    max-height: fit-content;
+
+}
+.card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+
+}
+.card > .left{
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 30%;
+    min-height: 100%;
+    text-align: center;
+    padding: 10px;
+    margin:auto 0 ;
+    max-height: fit-content;
+
+
+}
+.left > .first {
+    color: black;
+    font-size:25px;
+    font-weight: bolder;
+}
+.left > .sec {
+    color: gray;
+    font-size:16px;
+}
+.left > .thi {
+    color: gray;
+    font-size:15px;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.arrow{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+
+.card > .right{
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 70%;
+    min-height: 100%;
+    padding: 20px;
+    background-image: linear-gradient(
+        310deg
+        ,#13f1fc,#0470dc);
+}
+.right > img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}

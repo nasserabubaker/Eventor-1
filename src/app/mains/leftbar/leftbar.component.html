@@ -1,0 +1,52 @@
+<div class="nav">
+    <div class="logo-holder logo-5">
+        <a href="">
+          <h3>Eventor</h3>
+          <p>Manage everything</p>
+        </a>
+      </div>
+    <div  class="items">
+        <div routerLink="" id="item0" (click)="itemClick($event)" class="item item-prof">
+            <div class="icon icon-prof">       
+                <img  *ngIf="auth.user$ | async as user" src="{{user.picture}}">
+            </div>
+            <p *ngIf="auth.user$ | async as user" >{{user.nickname}}</p>
+        </div>
+        
+        <div  routerLink="showEvents" id="item1" (click)="itemClick($event)" class="item">
+            <div class="icon">       
+                <i class="fas fa-calendar-week"></i>
+            </div>
+            <p >My Events</p>
+        </div>
+        <div  routerLink="search" id="item5" (click)="itemClick($event)" class="item">
+            <div class="icon">       
+                <i class="fas fa-search"></i>
+                        </div>
+            <p >Search for Event</p>
+        </div>
+        <div routerLink="scheduleEvent" id="item2" (click)="itemClick($event)" class="item">
+            <div class="icon">       
+                <i class="far fa-calendar-plus"></i>
+            </div>
+            <p>schedule event</p>
+        </div>
+        <div routerLink="calender" id="item3" (click)="itemClick($event)" class="item">
+            <div class="icon">       
+                <i class="fas fa-calendar-day"></i>
+            </div>
+            <p>Calender</p>
+        </div>
+        <div  (click)="auth.logout({ returnTo: document.location.origin })" id="item4" (click)="itemClick($event)" class="item">
+            <div  (click)="auth.logout({ returnTo: document.location.origin })" class="icon">       
+                <i class="fas fa-sign-out-alt"></i>
+
+            </div>
+            <p  (click)="auth.logout({ returnTo: document.location.origin })">Logout</p>
+        </div>
+
+    </div>
+
+</div>
+
+

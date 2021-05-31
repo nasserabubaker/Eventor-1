@@ -1,0 +1,77 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="edit.component.css">
+    <div class="flex-container">
+        <div><img src="https://assets.website-files.com/5ed945986aedf80ff9c4bfd8/5f0ce2742ac2a4341cccfc46_undraw_remotely_2j6y.png" alt="image" ></div>
+        <div><div class="container">
+            <div class="title">Edit Event</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Event Title</span>
+                        <!--<input id="title" type="text" placeholder="Enter Event Title" value= "{{data[0].Title}}" required>-->
+                        <input id="title" type="text" [value]="data[0].Title" placeholder="Enter Event Title"  required>
+                    </div>
+                    <br> <br>
+                    <div class="input-box">
+                        <span class="details">Event Type</span>
+                        <br>
+                        <select id="type">
+                            <option value="1">
+                                open
+                            </option>
+                            <option value="2">
+                                private
+                            </option>
+                        </select>
+                        
+                    </div>
+                    <br><br>
+                    <div class="input-box">
+                        <span>Start Time </span>
+        
+                       <label for="startTime"></label>
+                        <!--<input type="time"   placeholder="Enter Start Time"  id="startTime"  value= "{{data[0].startTime}}"required>-->
+                        <input type="time" [value]="data[0].start_time"   placeholder="Enter Start Time"  id="startTime"  required>
+        
+                      </div>
+                    <br><br>
+                    <div class="input-box">
+                        <span>End Time </span>
+        
+                       <label for="endTime"></label>
+                       <!----<input type="time"   placeholder="Enter End Time"  id="endtTime" value= "{{data[0].Title}}" required>-->
+                        <input type="time" [value]="data[0].end_time"   placeholder="Enter End Time"  id="endtTime" value= "{{data[0].endTime}}" required>
+        
+                    </div>
+                    <br><br>
+                     <div class="input-box">
+                        <span class="details"  >Event Location <i class="material-icons">pin_drop</i></span>
+                       <!----<input type="text" placeholder="Enter Location Event " value= "{{data[0].Location}}" required>-->
+                       <input type="text" id="location"  [value]="data[0].location" placeholder="Enter Location Event " required>
+                        
+                    </div>
+
+                    <br><br><br> <br><br>
+                    <div  class="input-box">
+                        <span>Date </span>
+                       <!----<input type="date"  placeholder="Enter Date Event " id="date" value= "{{data[0].Date}}" required >-->
+                       <input type="date" value="2008-11-10"  placeholder="Enter Date Event " id="date" required >
+
+                     </div>
+                     <br><br>
+                     <div  class="input-box">
+                        <span>Description: </span>
+                         <!--<textarea id="Description"  placeholder="Enter Description Event "name="subject"  value= "{{data[0].Description}}"required></textarea>-->
+                         <textarea id="Description" [value]="data[0].description"   placeholder="Enter Description Event "name="subject"required></textarea>
+                    </div>
+                    <br><br>
+                    <div class="button">
+                        <input type="submit" (click)="display()" value="Submit ">
+                    </div>
+                </div>
+            </form>
+        </div></div>
+       
+      </div>

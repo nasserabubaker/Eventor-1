@@ -1,0 +1,62 @@
+:root{
+    --nav:25vw;
+}
+html{
+    background-color: white;
+}
+.view{
+    min-height: 50vh;
+    max-height: fit-content;
+    width: calc(100%-var(--nav));
+    margin-left: 25vw;
+}
+.cards{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: calc(100%-var(--nav));
+    margin-left: 25vw;
+}
+.box{
+    transition: box-shadow .3s;
+    padding: 20px;
+    border-radius: 30px;
+    height: 100px;
+    min-width: 300px;
+    background-color: white;
+    max-width: fit-content;
+    margin: 10px auto;
+    text-align: center;
+    color: gray;
+
+}
+.info > h1{
+    color: gray;
+    font-weight: bolder;
+
+}
+.card{
+    min-width: 250px; 
+    min-height: 250px;
+    margin: 10px 0;
+    text-align: center;
+    border: none !important;
+    margin-left: 50px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+
+}
+
+.title{
+    color: Gray;
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.date_info{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.date {
+    margin: 0 3px;
+}
+

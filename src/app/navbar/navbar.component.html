@@ -1,0 +1,34 @@
+<ng-container  *ngIf="auth.isAuthenticated$ | async; else notlogining">
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+    
+        <h1 class="w3-xxxlarge w3-text-theme">Eventor</h1>
+        <button class="w3-bar-item w3-button"  (click)="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a routerLink="" class="w3-bar-item w3-button" (click)="w3_close()">Home</a>
+        <ng-container *ngIf="auth.isAuthenticated$ | async;">
+            <button class="w3-bar-item w3-button" (click)="auth.logout({ returnTo: document.location.origin })">
+              Log out
+            </button>
+          </ng-container>
+
+            <a routerLink="showEvents"class="w3-bar-item w3-button" (click)="w3_close()">registration</a>
+    </nav>
+</ng-container>
+<ng-template #notlogining>
+    <nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+    
+        <h1 class="w3-xxxlarge w3-text-theme">Eventor</h1>
+        <button class="w3-bar-item w3-button"  (click)="w3_close()">Close <i class="fa fa-remove"></i></button>
+        <a routerLink="" class="w3-bar-item w3-button" (click)="w3_close()">Home</a>
+          <ng-container>
+            <button class="w3-bar-item w3-button" (click)="auth.loginWithRedirect()">Log in</button>
+          </ng-container>
+            <a routerLink="showEvents"class="w3-bar-item w3-button" (click)="w3_close()">registration</a>
+    </nav>
+</ng-template>
+
+    <i (click)="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme menuu"></i> 
+
+
+
+
+

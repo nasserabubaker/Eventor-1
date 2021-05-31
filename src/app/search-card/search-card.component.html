@@ -1,0 +1,19 @@
+
+    <nz-card style="width:300px; text-align: center;" [nzCover]="coverTemplate" [nzActions]="[  actionEllipsis]">
+      <nz-card-meta nzTitle="Title : event.Title" ></nz-card-meta>
+      <nz-card-meta  nzDescription="Date : {{getDDate(event.Date)}}" ></nz-card-meta>
+      <nz-card-meta  nzDescription="Start Time : {{ event.start_time}}" ></nz-card-meta>
+      <nz-card-meta  nzDescription="End Time : {{event.end_time}}" ></nz-card-meta>
+      <nz-card-meta  nzDescription="Type : {{getType(event.Type_ID)}}" ></nz-card-meta>
+    </nz-card>
+    <ng-template #avatarTemplate>
+      <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+    </ng-template>
+    <ng-template #coverTemplate>
+      <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />
+    </ng-template>
+
+    <ng-template #actionEllipsis>
+      <i nz-icon nzType="ellipsis">Info</i>
+    </ng-template>
+  

@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+}
+.nav-items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    padding-top: 10px;
+
+
+}
+li{
+    list-style-type: none;
+    padding-top: 10px;
+
+}
+.logo{
+    font-size: 2rem;
+    padding:5px;
+}

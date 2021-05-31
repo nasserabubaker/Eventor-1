@@ -1,0 +1,37 @@
+<div class="cards">
+
+    <div class="box profile" >
+        <div class="photo">
+            <img  *ngIf="auth.user$ | async as user" src="{{user.picture}}">
+        </div>
+        <div class="info"  >
+            <p  *ngIf="auth.user$ | async as user" class="name"> {{user.nickname}}</p>
+            <p  *ngIf="auth.user$ | async as user" class="enail">{{user.email}}</p>
+        </div>
+    </div>
+
+</div>
+<div class="big-cards">
+    <div class="card">
+        <div class="left">
+            <p class="first">Create Event</p>
+            <p class="sec">Choose the name, address and capacity and launch your event now on the platform</p>
+            <p class="thi">Create Event<span class="arrow">&#8594;</span> 	</p>
+        </div>
+        <div class="right">
+            <img src="../../../assets/photos/undraw_control_panel1_20gm.svg">
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="left">
+            <p class="first">Create Event</p>
+            <p class="sec">Choose the name, address and capacity and launch your event now on the platform</p>
+            <p class="thi">Create Event<span class="arrow">&#8594;</span> 	</p>
+        </div>
+        <div class="right">
+            <img src="../../../assets/photos/undraw_control_panel1_20gm.svg">
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="cards">
+    <div class="box profile" >
+        <div class="info"  >
+            <h1>All Events</h1>
+        </div>
+    </div>
+</div>
+
+<div class="view">
+    <div class="container-fluid">
+        <div class="row">
+                <app-card  *ngFor="let event of events" class="col-3 card" [s]="event" ></app-card>
+                <app-card  *ngFor="let event of events" class="col-3 card" [s]="event" ></app-card>
+                <app-card  *ngFor="let event of events" class="col-3 card" [s]="event" ></app-card>
+                <app-card  *ngFor="let event of events" class="col-3 card" [s]="event" ></app-card>
+        </div>
+    </div>
+
+</div>

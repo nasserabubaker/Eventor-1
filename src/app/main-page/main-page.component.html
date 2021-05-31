@@ -1,0 +1,156 @@
+<app-navbar></app-navbar>
+<div *ngIf="show" class="main_photo ">
+    <h1  *ngIf="auth.user$ | async as user" > {{(user.email)}}</h1>
+    <div class="left ">
+        <div class="logo-holder logo-5">
+            <a href="">
+              <h3>Eventor</h3>
+              <p>Manage everything</p>
+            </a>
+          </div>
+
+    </div>
+    <div class="right">
+    </div>
+</div>
+<div *ngIf="show" class="whatis">
+    <div class="leftwhat">
+        <h1 class="header">The future is Eventor</h1>
+        <p>From hybrid events to virtual platforms, that is the story behind <strong>Eventor</strong> 
+            inception. Our tools and advanced solutions were built on our own expertise
+             knowing that each event is unique. We want to enable all people to create 
+             and participate in fully customizable events – all in one place.</p>
+             <div class="ullist">
+                <ul>
+                    <li>
+                        Hosting thousands of Event's at the same time
+                    </li>
+                    <li>
+                        Live streaming and on-demand content for unrivalled knowledge sharing 
+                    </li>
+                    <li>
+                        Sponsor management to increase revenue streams 
+                    </li>
+                    <li>
+                        Live translation to any language 
+                    </li>
+                </ul>
+             </div>
+
+    </div>
+
+    <div class="rightwhat"></div>
+</div>
+
+<div *ngIf="show" class="cards">
+<p>
+    eventor event management app allows you to plan and manage your events on the go, giving you complete control from any location:
+</p>
+
+<div class="cardContainer">
+    <div class="docard" style="background-image: url('https://canapii.com/assets/landing/landing-page/icn-sell-tickets.png');">
+    <p>sell ticites</p>
+    </div>
+    <div class="docard" style="background-image: url('https://canapii.com/assets/landing/landing-page/icn-build-agendas.png');">
+        <p>Build Agendas</p>
+        </div>   
+    <div class="docard" style="background-image: url('https://canapii.com/assets/landing/landing-page/icn-control-delegate.png');">
+        <p>Control registration</p>
+        </div>
+    <div class="docard" style="background-image: url('https://canapii.com/assets/landing/landing-page/icn-sell-tickets.png');">
+        <p>sell ticites</p>
+        </div>
+</div>
+</div>
+
+<div *ngIf="show" class="half-layer ">
+    <div class="container">
+        <div class="layer-name logo-holder logo-5">
+              <h3>Project Team</h3>
+          </div>
+        <div class="team-container row">
+            <div class="square shadow col-4">
+                <div class="team_photo shadow">
+                    <img src="./../../assets/photos/mohamad.jpg">
+                </div>
+                <div class="team_name">
+                    <span class="name-txt">Mohamad</span>
+                </div>
+                <div class="team_place">
+                    <span class="place-txt">  FOUNDER & CEO</span>
+                </div>
+              
+                <div class="desc">
+                    <p>Hi There !<br>I love to introduce myself as a hardcore Web Designer.</p>
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="square shadow col-4">
+                <div class="team_photo shadow">
+                    <img src="./../../assets/photos/ahmad.jpg">
+                </div>
+                <div class="team_name">
+                    <span class="name-txt">Ahmad</span>
+                </div>
+                <div class="team_place">
+                    <span class="place-txt">Co-founder</span>
+                </div>
+              
+                <div class="desc">
+                    <p>Hi There !<br>I'm a Second year undergraduate in Computer Science.</p>
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="square shadow col-4">
+                <div class="team_photo shadow">
+                    <img src="./../../assets/photos/mohamad.jpg">
+                </div>
+                <div class="team_name">
+                    <span class="name-txt">Aya</span>
+                </div>
+                <div class="team_place">
+                    <span class="place-txt">  FOUNDER & CEO</span>
+                </div>
+              
+                <div class="desc">
+                    <p>Hi There !<br>I love to introduce myself as a hardcore Web Designer.</p>
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="square shadow col-4">
+                <div class="team_photo shadow">
+                    <img src="./../../assets/photos/mohamad.jpg">
+                </div>
+                <div class="team_name">
+                    <span class="name-txt">Maram</span>
+                </div>
+                <div class="team_place">
+                    <span class="place-txt">  FOUNDER & CEO</span>
+                </div>
+              
+                <div class="desc">
+                    <p>Hi There !<br>I love to introduce myself as a hardcore Web Designer.</p>
+                    <div class="social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    </div>
+</div>
