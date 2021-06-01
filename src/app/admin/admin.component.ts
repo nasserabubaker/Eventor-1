@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
+import { EventService } from '../services/event.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private eventservice:EventService) { }
+  members: any = [];
+   ngOnInit() {
+     this.eventservice.getAllUsers().subscribe(x   => { console.log(x); this.members = x; })
+  }
+  onDelete(id:string) {
+    alert(id);
   }
 
 }
