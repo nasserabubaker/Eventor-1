@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlleventsComponent } from './allevents/allevents.component';
 import { EditComponent } from './edit/edit.component';
-
+import { ScheduleComponent } from './schedule/schedule.component';
 import { AuthButtonComponent } from './logout/logout.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MainComponent } from './main/main.component';
@@ -33,6 +33,9 @@ const routes: Routes = [
       {
         path: "search", component: SearchComponent
       },
+      {
+        path: "scheduleEvent", component: ScheduleComponent
+      }
     ]
   
   },

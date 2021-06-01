@@ -6,27 +6,69 @@ import { EventService } from '../services/event.service';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
-  id = 1;
-  title = null;
-  date = null;
-  start_time = null;
-  end_time = null;
-  location = null;
-  description = null;
-  type = null;
-
-  constructor(private scheduleservice:EventService) { }
+  constructor(private eventservice: EventService) { }
+  id: number= 1;
   ngOnInit(): void {
-    let newevent={
-      title: this.title,
-      type: this.type,
-      date: this.date,
-      start_time: this.start_time,
-      end_time: this.end_time,
-      location: this.location,
-      description: this.description,  
-      userid: this.id
+      }
+  validate(){
+    let title = (<HTMLInputElement>document.getElementById("title"))?.value;
+    let type = (<HTMLSelectElement>document.getElementById("type"))?.value;
+    let date = (<HTMLInputElement>document.getElementById("date"))?.value;
+    let start_time = (<HTMLInputElement>document.getElementById("startt"))?.value;
+    let location = (<HTMLInputElement>document.getElementById("loc"))?.value;
+    let description = (<HTMLInputElement>document.getElementById("desc"))?.value;
+    
+    if(!title){
+      alert("Title must be filled out!");
+      return false;
     }
-    this.scheduleservice.addEvent(newevent).subscribe(x => this.id = newevent.userid);
+    else if(!type){
+      alert("Type must be selected!");
+      return false;
+    }
+    else if(!date){
+      alert("Date must be selected!");
+      return false;
+     }
+    else if(!start_time){
+      alert("Start Time must be selected!");
+      return false;
+    }
+    else if(!location){
+      alert("Location must be filled out!");
+      return false;
+    }
+    else if(!description){
+      alert("Description must be filled out!");
+       return false;
+    }
+    else{
+      alert("Event Scheduled!");
+      return true;
+    }
   }
+  Create() {
+    let title = (<HTMLInputElement>document.getElementById("title"))?.value;
+    let type = (<HTMLSelectElement>document.getElementById("type"))?.value;
+    let date = (<HTMLInputElement>document.getElementById("date"))?.value;
+    let start_time = (<HTMLInputElement>document.getElementById("startt"))?.value;
+    let end_time = (<HTMLInputElement>document.getElementById("endt"))?.value;
+    let location = (<HTMLInputElement>document.getElementById("loc"))?.value;
+    let description = (<HTMLInputElement>document.getElementById("desc"))?.value;
+  
+    let obj1={
+      userid: this.id,
+      title: title,
+      type: type,
+      date: date,
+      start_time: start_time,
+      end_time: end_time,
+      location: location,
+      description: description
+    }
+    if(this.validate() == true){
+    console.log(obj1);
+    this.eventservice.addEvent(obj1).subscribe(x => obj1);
+  }
+}
 }

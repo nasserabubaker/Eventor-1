@@ -63,10 +63,14 @@ app.put('/API/events/editevent', async (req, res) => {
     console.log(req.body.description);
     console.log(req.body.type);
     console.log(req.body.ID);
+    type_id = 0;
+    if(req.body.type == "open") type_id = 1;
+    else if (req.body.type == "paid") type_id = 2;
+    else if(req.body.type == "private") type_id =3;
     let sql = "update event set Title = ?,Date = ?,start_time =?,end_time=?,location=?,description=?,Type_ID=? where ID = ?"
     let [result, rows] = await db.connection.execute(sql, [req.body.title,
         req.body.date, req.body.start_time, req.body.end_time,
-        req.body.location, req.body.description, req.body.type,
+        req.body.location, req.body.description, type_id,
         req.body.ID])
      res.status(200).json("row edited");
  });
@@ -123,6 +127,12 @@ app.delete('/API/events/deleteevent/:id', async (req, res) => {
      res.status(200).json("Event Successfully create ");
  });
 
+ app.get('/API/events/attended_events/:id', async (req, res) => {
+    var id = req.params.id;
+    let sql = "SELECT ID,Title, Date,start_time,end_time FROM event WHERE ID IN (SELECT Event_ID FROM attendees WHERE User_ID = ?)";
+    let results =  await db.connection.execute(sql,[id])
+    res.status(200).json(results[0]);
+});
 
 //external API Get ALL Users   
 /*

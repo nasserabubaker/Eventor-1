@@ -11,7 +11,6 @@ export class EventService {
   getHostedEvents(id:number) {
     return this.http.get("http://localhost:3000/API/events/Show_all/" +id);
   }
-  
   EditEvent(obj:any){
     return this.http.put("http://localhost:3000/API/events/editevent",obj)
   }
@@ -26,6 +25,9 @@ export class EventService {
   }
   eventSearch(obj: any) {
     return this.http.get("http://localhost:3000/API/events/search/"+ obj.word)
+  }
+  getAttendedEvents(id:number) {
+    return this.http.get("http://localhost:3000/API/events/attended_events/" +id);
   }
 
 }

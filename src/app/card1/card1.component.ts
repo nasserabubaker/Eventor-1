@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { EventService } from '../services/event.service';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html'
+  selector: 'app-card1',
+  templateUrl: './card1.component.html'
 })
-export class CardComponent {
-  constructor(private eventserves:EventService) { }
+export class Card1Component {
+  constructor(private eventserves: EventService) { }
 
   @Input("s") event: any;
   getDDate(date: Date) {

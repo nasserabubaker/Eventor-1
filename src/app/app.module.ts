@@ -14,7 +14,7 @@ import { EventService } from './services/event.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { ScheduleComponent } from './schedule/schedule.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './logout/logout.component';
 import { DashboardComponent } from './mains/dashboard/dashboard.component';
@@ -33,6 +33,7 @@ import { NzAvatarModule } from 'ng-zorro-antd/avatar';
 import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
 import { SearchCardComponent } from './search-card/search-card.component';
+import { Card1Component } from './card1/card1.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -40,7 +41,7 @@ registerLocaleData(en);
     AppComponent,
     MainComponent,
     AlleventsComponent,
-
+    ScheduleComponent,
     NavbarComponent,
     MainPageComponent,
     AuthButtonComponent,
@@ -52,7 +53,7 @@ registerLocaleData(en);
     SearchComponent,
     EditComponent,
     SearchCardComponent,
-    
+    Card1Component,
 
   ],
   imports: [
