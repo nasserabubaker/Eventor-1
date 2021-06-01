@@ -1,3 +1,37 @@
-<div class="main">
+    <div class="container_fluid main">
 
-</div>
+        <h1 class="main_text">الزبائن</h1>
+
+    
+        <div class="table">
+            <div class="container">
+                <ul class="responsive-table">
+                  <li class="table-header">
+                    <div class="col col-1">Name</div>
+                    <div class="col col-1">Email</div>
+                    <div class="col col-1">Email verified</div>
+                    <div class="col col-1">controls</div>
+                  <li *ngFor="let member of members" class="table-row">
+
+
+                    <div class="col col-1" data-label="Name">
+                        {{member.name}}
+                    </div>
+                    <div class="col col-1" data-label="Email">
+                        {{member.email}}
+                    </div>
+                    <div class="col col-1" data-label="email verified">
+                        {{member.email_verified}}
+                    </div>
+                    <div class="col col-1" data-label="الاعدادات">
+                        <div class="controls ">
+                            <button type="button" (click)="onDelete(member.user_id)"  class="btn btn-danger ">Delete</button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+    
+            
+        </div>
+    </div>
