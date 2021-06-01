@@ -11,6 +11,7 @@ import { DashboardComponent } from './mains/dashboard/dashboard.component';
 import { ProfileComponent } from './mains/profile/profile.component';
 import { SearchComponent } from './search/search.component';
 import { CalenderComponentComponent } from './calender-component/calender-component.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: "", component: MainPageComponent },
@@ -38,6 +39,10 @@ const routes: Routes = [
       },
       {
         path: "scheduleEvent", component: ScheduleComponent
+      },
+      
+      {
+        path: "admin", component: AdminComponent
       }
     ]
   
