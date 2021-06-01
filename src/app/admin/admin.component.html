@@ -1,8 +1,4 @@
     <div class="container_fluid main">
-
-        <h1 class="main_text">الزبائن</h1>
-
-    
         <div class="table">
             <div class="container">
                 <ul class="responsive-table">
@@ -23,7 +19,7 @@
                     <div class="col col-1" data-label="email verified">
                         {{member.email_verified}}
                     </div>
-                    <div class="col col-1" data-label="الاعدادات">
+                    <div class="col col-1" data-label="settings">
                         <div class="controls ">
                             <button type="button" (click)="onDelete(member.user_id)"  class="btn btn-danger ">Delete</button>
                         </div>
@@ -31,7 +27,5 @@
                   </li>
                 </ul>
               </div>
-    
-            
         </div>
     </div>

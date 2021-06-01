@@ -15,7 +15,9 @@ export class AdminComponent implements OnInit {
      this.eventservice.getAllUsers().subscribe(x   => { console.log(x); this.members = x; })
   }
   onDelete(id:string) {
-    alert(id);
+    this.eventservice.DeleteUser(id).subscribe(x => {
+      alert("User Deleted!");
+      document.location.reload();
+    });
   }
-
 }

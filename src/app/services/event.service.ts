@@ -35,6 +35,9 @@ export class EventService {
   LeaveEvent(obj:any){
     return this.http.delete("http://localhost:3000/API/events/leave_event/"+ obj.uid + "/" + obj.eid);
   }
+  DeleteUser(id:string){
+    return this.http.delete("http://localhost:3000/API/Users/"+id);
+  }
 
 }
 
