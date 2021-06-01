@@ -10,11 +10,14 @@ import { CalenderComponent } from './mains/calender/calender.component';
 import { DashboardComponent } from './mains/dashboard/dashboard.component';
 import { ProfileComponent } from './mains/profile/profile.component';
 import { SearchComponent } from './search/search.component';
+import { CalenderComponentComponent } from './calender-component/calender-component.component';
 
 const routes: Routes = [
   { path: "", component: MainPageComponent },
   { path: "login", component: AuthButtonComponent },
   { path: "edit/:id", component: EditComponent },
+  { path: "calendercomp", component: CalenderComponentComponent },
+
 
   {
 

@@ -34,6 +34,11 @@ import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
 import { SearchCardComponent } from './search-card/search-card.component';
 import { Card1Component } from './card1/card1.component';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+
+import { CalenderComponentComponent } from './calender-component/calender-component.component';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -54,6 +59,7 @@ registerLocaleData(en);
     EditComponent,
     SearchCardComponent,
     Card1Component,
+    CalenderComponentComponent,
 
   ],
   imports: [
@@ -65,6 +71,11 @@ registerLocaleData(en);
     NzButtonModule,
     NzCardModule,
     NzAvatarModule,
+    NzCalendarModule,
+    NzBadgeModule,
+    
+    
+    
 
     AuthModule.forRoot({
       domain: 'dev-3kr-4o27.us.auth0.com',
