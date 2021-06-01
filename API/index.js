@@ -141,6 +141,13 @@ app.delete('/API/events/leave_event/:uid/:eid', async (req, res) => {
     let [result,rows] = await db.connection.execute(sql , [req.params.uid, req.params.eid])
     res.status(200).json("Event Successfully Left.");
  });
+ app.get('/API/events/search/join/:uid/:eid', async (req, res) => {
+     console.log(req.params.uid);
+     console.log(req.params.eid);
+    let sql = "INSERT INTO attendees(User_ID, Event_ID, status) values(?,?,1)";
+    let results = await db.connection.execute(sql, [req.params.uid, req.params.eid]);
+    res.status(200).json("user added");
+});
 //external API Get ALL Users   
 /*
 Just Call localhost:300/API/Users

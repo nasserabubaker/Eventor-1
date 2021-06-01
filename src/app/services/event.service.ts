@@ -38,6 +38,8 @@ export class EventService {
   DeleteUser(id:string){
     return this.http.delete("http://localhost:3000/API/Users/"+id);
   }
-
+  joinEvent(obj:any){
+    return this.http.get("http://localhost:3000/API/events/search/join/"+obj.userid+ "/" + obj.eid);
+  }
 }
 
