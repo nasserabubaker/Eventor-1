@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventService } from '../services/event.service';
 @Component({
   selector: 'app-schedule',
@@ -6,7 +7,7 @@ import { EventService } from '../services/event.service';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
-  constructor(private eventservice: EventService) { }
+  constructor(private eventservice: EventService,private router:Router) { }
   id: number= 1;
   ngOnInit(): void {
       }
@@ -68,7 +69,7 @@ export class ScheduleComponent implements OnInit {
     }
     if(this.validate() == true){
     console.log(obj1);
-    this.eventservice.addEvent(obj1).subscribe(x => obj1);
+    this.eventservice.addEvent(obj1).subscribe(x => this.router.navigateByUrl("dashbord/showEvents"));
   }
 }
 }

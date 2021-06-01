@@ -16,7 +16,7 @@ const db = require('./db');
 
 
 // instance from bodyparser wich used to able us use req.body stetment
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 // make variable for the port in our case the port we will work with is 3000
 const port = 3000;
@@ -63,14 +63,10 @@ app.put('/API/events/editevent', async (req, res) => {
     console.log(req.body.description);
     console.log(req.body.type);
     console.log(req.body.ID);
-    type_id = 0;
-    if(req.body.type == "open") type_id = 1;
-    else if (req.body.type == "paid") type_id = 2;
-    else if(req.body.type == "private") type_id =3;
     let sql = "update event set Title = ?,Date = ?,start_time =?,end_time=?,location=?,description=?,Type_ID=? where ID = ?"
     let [result, rows] = await db.connection.execute(sql, [req.body.title,
         req.body.date, req.body.start_time, req.body.end_time,
-        req.body.location, req.body.description, type_id,
+        req.body.location, req.body.description, req.body.type,
         req.body.ID])
      res.status(200).json("row edited");
  });
@@ -122,8 +118,13 @@ app.delete('/API/events/deleteevent/:id', async (req, res) => {
 
  app.post('/API/events/addevent', async (req, res) => {
     //write the nesseary sql stetment
+    console.log(req.body.type);
+    type_id = 0;
+    if (req.body.type == "open") type_id = 1;
+    else if (req.body.type == "paid") type_id = 2;
+    else if (req.body.type == "private") type_id = 3;
     let sql = "insert into  event (Title,Date,start_time,end_time,location,description,Type_ID,User_ID) values(?,?,?,?,?,?,?,?);"
-   let [result,rows] = await db.connection.execute(sql, [req.body.title, req.body.date, req.body.start_time, req.body.end_time, req.body.location, req.body.description, req.body.type, req.body.userid])
+   let [result,rows] = await db.connection.execute(sql, [req.body.title, req.body.date, req.body.start_time, req.body.end_time, req.body.location, req.body.description, type_id, req.body.userid])
      res.status(200).json("Event Successfully create ");
  });
 
