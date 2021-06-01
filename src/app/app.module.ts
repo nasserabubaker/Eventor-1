@@ -36,7 +36,6 @@ import { SearchCardComponent } from './search-card/search-card.component';
 import { Card1Component } from './card1/card1.component';
 import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
-
 import { CalenderComponentComponent } from './calender-component/calender-component.component';
 import { AdminComponent } from './admin/admin.component';
 
@@ -62,6 +61,7 @@ registerLocaleData(en);
     Card1Component,
     CalenderComponentComponent,
     AdminComponent,
+    Card1Component
 
   ],
   imports: [

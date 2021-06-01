@@ -7,7 +7,7 @@ import { EventService } from '../services/event.service';
 })
 export class Card1Component {
   constructor(private eventserves: EventService) { }
-
+  uid = 2;
   @Input("s") event: any;
   getDDate(date: Date) {
     if(!date){
@@ -18,13 +18,26 @@ export class Card1Component {
     var y = x.split("T")
     return y[0];
   }
-  DeleteEv(){
+  Leave(){
     let obj = {
-      id: this.event.ID
+      uid: this.uid,
+      eid: this.event.ID
     }
-    this.eventserves.DeleteEvent(obj).subscribe(x => {
-      alert("course Deleted");
-      document.location.reload();
-    });
-  }
+    var now = new Date();
+    var nowt = now.getTime();
+    var event_date =this.getDDate(this.event.Date);
+    console.log(event_date);
+    var ev = new Date(event_date);
+    var event_time = ev.getTime();
+
+    if (nowt < event_time){
+      this.eventserves.LeaveEvent(obj).subscribe(x => {
+        alert("Event Left!");
+        document.location.reload();
+      });
+    }
+    else{
+      alert("Cannot leave events that passed!");
+    }
+}
 }

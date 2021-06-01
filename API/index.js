@@ -134,7 +134,13 @@ app.delete('/API/events/deleteevent/:id', async (req, res) => {
     let results =  await db.connection.execute(sql,[id])
     res.status(200).json(results[0]);
 });
-
+app.delete('/API/events/leave_event/:uid/:eid', async (req, res) => {
+    let sql = "DELETE FROM attendees WHERE User_ID = ? AND Event_ID = ?";
+    console.log(req.params.uid);
+    console.log(req.params.eid);
+    let [result,rows] = await db.connection.execute(sql , [req.params.uid, req.params.eid])
+    res.status(200).json("Event Successfully Left.");
+ });
 //external API Get ALL Users   
 /*
 Just Call localhost:300/API/Users
