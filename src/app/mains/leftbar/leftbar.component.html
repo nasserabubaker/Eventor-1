@@ -37,6 +37,12 @@
             </div>
             <p>Calendar</p>
         </div>
+        <div routerLink="admin" id="item6" (click)="itemClick($event)" class="item">
+            <div class="icon">       
+                <i class="fas fa-calendar-day"></i>
+            </div>
+            <p>Admin</p>
+        </div>
         <div  (click)="auth.logout({ returnTo: document.location.origin })" id="item4" (click)="itemClick($event)" class="item">
             <div  (click)="auth.logout({ returnTo: document.location.origin })" class="icon">       
                 <i class="fas fa-sign-out-alt"></i>

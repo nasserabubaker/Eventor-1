@@ -37,7 +37,7 @@ export class LeftbarComponent implements OnInit {
       }
     }
 
-    for (var i = 0; i <= 5; i++){
+    for (var i = 0; i <= 6; i++){
       var idd = "item" + i;
       document.getElementById(idd)?.style.setProperty("background-color", "white");
     }

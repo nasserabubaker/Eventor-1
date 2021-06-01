@@ -29,6 +29,9 @@ export class EventService {
   getAttendedEvents(id:number) {
     return this.http.get("http://localhost:3000/API/events/attended_events/" +id);
   }
+  getAllUsers() {
+    return this.http.get("http://localhost:3000/API/Users");
+  }
 
 }
 

@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SearchCardComponent {
   @Input("n") event: any;
+  userid = 2;
 
   getDDate(date: Date) {
     var x = date.toString()
