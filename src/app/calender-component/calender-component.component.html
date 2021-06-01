@@ -1,0 +1,22 @@
+<button routerLink="/dashbord" type="button" class="btn btn-primary">Back</button>
+
+    <nz-calendar>
+      <ul *nzDateCell="let date" class="events">
+            <div *ngFor="let item of events">
+              <div *ngIf="getDDate(item.Date)===date.getTime()">
+                <nz-badge nzStatus="warning" [nzText]="item.Title"></nz-badge>
+              </div>
+
+            </div>
+
+
+            
+      </ul>
+      <ng-container *nzMonthCell="let month">
+        
+        <div *ngIf="getMonthData(month) as monthData" class="notes-month">
+          <section>{{ monthData }}</section>
+          <span>Backlog number</span>
+        </div>
+      </ng-container>
+    </nz-calendar>
