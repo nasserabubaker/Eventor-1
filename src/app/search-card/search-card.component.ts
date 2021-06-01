@@ -25,7 +25,7 @@ export class SearchCardComponent {
       userid: this.userid,
       eid: this.event.ID
     }
-    this.eventservice.joinEventttt(obj).subscribe(x => this.events = x);
+    this.eventservice.joinEvent(obj).subscribe(x => this.events = x);
     alert("Event Joined!");
   }
 }
