@@ -10,7 +10,7 @@ async function connection() {
     let dbconnection = await mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '',
+        password: 'ayaxda11',
         database:'eventor'
     })
     //store the result of connection to module export for returning it to index.js to use it there

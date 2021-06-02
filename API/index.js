@@ -179,4 +179,20 @@ and the data from the External API get to your Hand :P
        console.error(error);
      });
  });
+ app.get('/API/events/attendees/:eid', async (req, res) => {
+    let sql = "select User_ID from attendees where Event_ID = ?";
+    let results = await db.connection.execute(sql, [req.params.eid]);
+    res.status(200).json(results[0]);
+ });
+ 
+ app.get('/API/events/users', async (req, res) => {
+    let sql = "select ID, name, email from user";
+    let results = await db.connection.execute(sql);
+    res.status(200).json(results[0]);
+ });
 
+ app.delete('/API/events/deleteattendee/:eid/:uid', async (req, res) => {
+    let sql = "delete from attendees where Event_ID = ? and User_ID = ?"
+    let [result,rows] = await db.connection.execute(sql , [req.params.eid ,req.params.uid])
+    res.status(200).json("Event Successfully Deleted.");
+ });
