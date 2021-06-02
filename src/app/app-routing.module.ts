@@ -12,6 +12,7 @@ import { ProfileComponent } from './mains/profile/profile.component';
 import { SearchComponent } from './search/search.component';
 import { CalenderComponentComponent } from './calender-component/calender-component.component';
 import { AdminComponent } from './admin/admin.component';
+import { AttendeesListComponent } from './attendees-list/attendees-list.component';
 
 const routes: Routes = [
   { path: "", component: MainPageComponent },
@@ -43,10 +44,15 @@ const routes: Routes = [
       
       {
         path: "admin", component: AdminComponent
+      },
+      {
+        path: "attendees/:id", component: AttendeesListComponent
       }
     ]
+ 
   
   },
+
 ];  
 
 

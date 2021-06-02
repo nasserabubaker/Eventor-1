@@ -16,7 +16,7 @@
     </ng-template>
     
     <ng-template #actionShow>
-      <i nz-icon nzType="edit" (click)="DeleteEv()">Attendees</i>
+      <i nz-icon nzType="edit" [routerLink]= "['/dashbord/attendees',event.ID]" >Attendees</i>
     </ng-template>
 
   

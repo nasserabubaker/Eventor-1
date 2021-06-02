@@ -45,7 +45,7 @@ export class EventService {
     return this.http.get("http://localhost:3000/API/events/attendees/"+ EID);
   } 
   GetUsers(){
-    return this.http.get("http://localhost:3000//API/events/users");
+    return this.http.get("http://localhost:3000/API/events/users");
   }
   DeleteAttendee(EID: number , UID: number){
     return this.http.delete("http://localhost:3000/API/events/deleteattendee/"+EID + "/" + UID);

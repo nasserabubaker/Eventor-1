@@ -1,1 +1,26 @@
-<p>attendees-list works!</p>
+
+    <div class="container_fluid main">
+        <div class="table">
+            <div class="container">
+                <ul class="responsive-table">
+                  <li class="table-header">
+                    <div class="col col-1">Name</div>
+                    <div class="col col-1">Email</div>
+                    <div class="col col-1">controls</div>
+                  <li *ngFor="let attende of attendes"  class="table-row">
+                    <div class="col col-1" data-label="Name">
+                        {{getName(attende.User_ID)}}
+                    </div>
+                    <div class="col col-1" data-label="Email">
+                        {{getEmail(attende.User_ID)}}
+                    </div>
+                    <div class="col col-1" data-label="settings">
+                        <div class="controls ">
+                            <button type="button" (click)="Ondelete(attende.User_ID)"  class="btn btn-danger ">Delete</button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </div>
+    </div>
